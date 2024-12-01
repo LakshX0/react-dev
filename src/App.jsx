@@ -1,5 +1,6 @@
 import "./App.css";
 import Button from "./Button";
+import Item from "./Item";
 import ShoppingList from "./ShoppingList";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Button />
       <ShoppingList />
+      <Item />
     </>
   );
 }
