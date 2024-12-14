@@ -5,6 +5,8 @@ import Button from "./Button";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import Like from "./assets/components/Like";
 import Msg from "./assets/components/Msg";
+import Beverage from "./assets/components/Beverage";
+import Customer from "./assets/components/Customer";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -45,8 +47,10 @@ function App() {
       <br />
       <br />
       <Msg />
-      <Msg />
-      <Msg />
+      <br />
+      <Beverage />
+      <br />
+      <Customer />
     </div>
   );
 }
