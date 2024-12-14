@@ -4,6 +4,7 @@ import ListGroup from "./assets/components/ListGroup";
 import Button from "./Button";
 import { BsFillCalendarDateFill } from "react-icons/bs";
 import Like from "./assets/components/Like";
+import Msg from "./assets/components/Msg";
 
 function App() {
   const [alertVisible, setAlertVisible] = useState(false);
@@ -41,6 +42,11 @@ function App() {
       <br />
       <br />
       <Like />
+      <br />
+      <br />
+      <Msg />
+      <Msg />
+      <Msg />
     </div>
   );
 }
