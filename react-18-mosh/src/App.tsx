@@ -1,31 +1,38 @@
 import { useState } from "react";
-import Alert from "./Alert";
-import ListGroup from "./assets/components/ListGroup";
-import Button from "./Button";
-import { BsFillCalendarDateFill } from "react-icons/bs";
-import Like from "./assets/components/Like";
-import Msg from "./assets/components/Msg";
-import Beverage from "./assets/components/Beverage";
-import Customer from "./assets/components/Customer";
+import NavBar from "./assets/components/Shopping/NavBar";
+import Cart from "./assets/components/Shopping/Cart";
+import Player from "./assets/components/Player";
+
+// import Alert from "./Alert";
+// import ListGroup from "./assets/components/ListGroup";
+// import Button from "./Button";
+// import { BsFillCalendarDateFill } from "react-icons/bs";
+// import Like from "./assets/components/Like";
+// import Msg from "./assets/components/Msg";
+// import Beverage from "./assets/components/Beverage";
+// import Customer from "./assets/components/Customer";
 
 function App() {
-  const [alertVisible, setAlertVisible] = useState(false);
+  const [cartItems, setCartItems] = useState(["Product 1", "Product 2"]);
+  // const [alertVisible, setAlertVisible] = useState(false);
 
-  const cities = [
-    "Ratnapura",
-    "Colombo",
-    "Kandy",
-    "Trincomalee",
-    "Nuwara Eliya",
-    "Gampaha",
-  ];
-  const handleSelectItem = (item: string) => {
-    console.log(item);
-  };
+  // const cities = [
+  //   "Ratnapura",
+  //   "Colombo",
+  //   "Kandy",
+  //   "Trincomalee",
+  //   "Nuwara Eliya",
+  //   "Gampaha",
+  // ];
+  // const handleSelectItem = (item: string) => {
+  //   console.log(item);
+  // };
 
   return (
-    <div>
-      <ListGroup
+    <>
+      <div>
+        {" "}
+        {/* <ListGroup
         items={cities}
         heading="Cities of Sri Lanka"
         onSelectItem={handleSelectItem}
@@ -50,8 +57,17 @@ function App() {
       <br />
       <Beverage />
       <br />
-      <Customer />
-    </div>
+      <Customer /> */}
+      </div>
+      <div>
+        <NavBar cartItemsCount={cartItems.length} />
+        <Cart
+          cartItems={cartItems}
+          onClear={() => setCartItems([])}
+        /> <br /> <br />
+        <Player />
+      </div>
+    </>
   );
 }
 
